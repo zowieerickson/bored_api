@@ -1,8 +1,21 @@
-fetch('https://apis.scrimba.com/bored/api/activity')
-    .then(response => response.json())
-    .then(data => {
-        const boredContainer = document.querySelector("#bored-container")
-        boredContainer.innerHTML = `
-        Activity: ${data.activity}
-        `
-    })
+
+
+
+
+
+
+
+
+
+document.querySelector("#get-activity").addEventListener('click', function() {
+    fetch('https://www.boredapi.com/api/activity')
+.then(response => response.json())
+.then(data => {
+    const activity = document.querySelector("#activity")
+    activity.style.visibility = "visible"
+    activity.innerHTML = `
+    ${data.activity}
+    `
+})
+})
+
